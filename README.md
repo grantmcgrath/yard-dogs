@@ -1,2 +1,2 @@
 # yard-dogs
-Top Secret Mystery Project for July Hack-a-Thon - July 19th-20th, 2017
+Top Secret Mystery Project for July Hack-a-Thon - July 19th-21th, 2017
