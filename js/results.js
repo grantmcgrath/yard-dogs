@@ -4,28 +4,37 @@ fetch("https://opendata.arcgis.com/datasets/124c2187da8c41c59bde04fa67eb2872_0.g
   response.json().then(function(data) {
       console.log(data);
       return data;
-    })
-    .then( //don't run till data loads
+    }).then( //don't run till data loads
       // insert map function here
-      
+
+      // map restaurants to hsisid
+
+      // fetch inspections
+
+      // limit inspections to most recent one based on date
+
+      // map inspections into restaurants
+
+
       // string literal template
+      // commented out since data isn't there yet
 
-      for (var i = 0; i < 16; i++) {
-        var restResult = `
-      <div class="result">
-        <h2>${data[i].features.properties.Name}</h2>
-        <p>${data[i].features.properties.PhoneNumber}</p>
-        <p>${data[i].features.properties.Address1}</p>
-        <p>${data[i].features.properties.City}, NC ${data[i].features.properties.PostalCode}</p>
-      </div>
-      `;
-
-        // <h3>${data[i].features.properties.Inspections.score}</h3>
-
-
-        // appends string to results box. place inside loop/map
-        document.querySelector("#results").innerHTML += restResult;
-      }
+      // for (var i = 0; i < 16; i++) {
+      //   var restResult = `
+      // <div class="result">
+      //   <h2>${data[i].features.properties.Name}</h2>
+      //   <p>${data[i].features.properties.PhoneNumber}</p>
+      //   <p>${data[i].features.properties.Address1}</p>
+      //   <p>${data[i].features.properties.City}, NC ${data[i].features.properties.PostalCode}</p>
+      // </div>
+      // `;
+      //
+      //   // <h3>${data[i].features.properties.Inspections.score}</h3>
+      //
+      //
+      //   // appends string to results box. place inside loop/map
+      //   document.querySelector("#results").innerHTML += restResult;
+      // }
     )
 })
 
