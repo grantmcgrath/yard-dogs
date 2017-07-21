@@ -50,7 +50,9 @@ footer {
   position: fixed;
   bottom: 0;
   font-weight: 400;
-    /*border: 5px dotted black;*/
+  /*border: 5px dotted black;*/
+  background-image: linear-gradient(to left, #FFFFFF, #ECECEC, #FFFFFF);
+  display: none;
 }
 
 #emptySection {
@@ -68,7 +70,7 @@ footer {
 }
 
 #results {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   /*justify-content: space-between;*/
   align-content: flex-start;
@@ -78,8 +80,8 @@ footer {
 }
 
 .result {
-  width: 15vw;
-  height: 15vw;
+  width: 20vw;
+  height: 30vw;
   border: 2px solid black;
   /*margin-bottom: .7vw;*/
   margin: .3vw;
