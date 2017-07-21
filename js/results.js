@@ -5,26 +5,26 @@ fetch("https://opendata.arcgis.com/datasets/124c2187da8c41c59bde04fa67eb2872_0.g
       console.log(data);
       return data;
     })
-    .then(function(){
-      console.log('hello')
+    .then(function(data){
+      console.log(data.features[0].properties.Name)
       for (var i = 0; i < 16; i++) {
-        console.log('for loop')
 
         // this is still borked
         // here be dragons
-        // var restResult = `
-        //   <div class="result">
-        //   <h2>${data.features.[i].properties.Name}</h2>
-        //   <p>${data.features.[i].properties.PhoneNumber}</p>
-        //   <p>${data.features.[i].properties.Address1}</p>
-        //   <p>${data.features.[i].properties.City}, NC ${data.features.[i].properties.PostalCode}</p>
-        // </div>`;
+        var restResult = `
+          <div class="result">
+          <h2>${data.features[i].properties.Name}</h2>
+          <p>${data.features[i].properties.PhoneNumber}</p>
+          <p>${data.features[i].properties.Address1}</p>
+          <p>${data.features[i].properties.City}, NC ${data.features[i].properties.PostalCode}</p>
+        </div>`;
+        console.log(restResult);
         //
         // // <h3>${data[i].features.properties.Inspections.score}</h3>
         //
         //
         // // appends string to results box. place inside loop/map
-        // document.querySelector("#results").innerHTML += restResult;
+        document.querySelector("#results").innerHTML += restResult;
         }
       }
     )
