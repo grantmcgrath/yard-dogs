@@ -1,32 +1,44 @@
-
-
+// replace with legit fetch
+// testing only
 fetch("https://opendata.arcgis.com/datasets/124c2187da8c41c59bde04fa67eb2872_0.geojson").then(function(response) {
   response.json().then(function(data) {
-    console.log(data);
-    return data;
-  })
-  .then(
-    // Inserts the template into the results section.
-    function search() {
-      document.getElementById("emptySection").style.height = "0";
-      document.getElementById("footer").style.display = "block";
-      document.getElementById("results").style.display = "flex";
-      document.querySelector("#results").innerHTML = '';
-for (var i = 0; i < array.length; i++) {
-  array[i]
-}
-      var restResult = `
+      console.log(data);
+      return data;
+    })
+    .then( //don't run till data loads
+      // insert map function here
+      
+      // string literal template
+
+      for (var i = 0; i < 16; i++) {
+        var restResult = `
       <div class="result">
-        <h2>${restaurants.properties.Name}</h2>
-        <p>${restaurants.properties.PhoneNumber}</p>
-        <p>${restaurants.properties.Address1}</p>
-        <p>${restaurants.properties.City}, NC ${restaurants.properties.PostalCode}</p>
-        <h3>${restaurants.properties.Inspections.score}</h3>
+        <h2>${data[i].features.properties.Name}</h2>
+        <p>${data[i].features.properties.PhoneNumber}</p>
+        <p>${data[i].features.properties.Address1}</p>
+        <p>${data[i].features.properties.City}, NC ${data[i].features.properties.PostalCode}</p>
       </div>
       `;
 
+        // <h3>${data[i].features.properties.Inspections.score}</h3>
 
-      document.querySelector("#results").innerHTML += restResult;
-    }
-  )
+
+        // appends string to results box. place inside loop/map
+        document.querySelector("#results").innerHTML += restResult;
+      }
+    )
 })
+
+
+// Inserts the template into the results section.
+document.getElementById('searchButton').addEventListener('click', function search() {
+  // moves search box up
+  document.getElementById("emptySection").style.height = "0";
+  // displays footer
+  document.getElementById("footer").style.display = "block";
+  // makes box for diplaying results
+  document.getElementById("results").style.display = "flex";
+  // this line clears the search box
+  document.querySelector("#results").innerHTML = '';
+  return;
+});

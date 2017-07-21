@@ -10,13 +10,12 @@ header {
   border-bottom: 2px solid black;
   text-align: center;
   margin: 0 auto 2vw;
-
 }
 
 section {
   width: 80vw;
   margin: 0 auto;
-  }
+}
 
 a, a:hover, a:active, a:visited {
   color: black;
@@ -51,8 +50,11 @@ footer {
   bottom: 0;
   font-weight: 400;
   /*border: 5px dotted black;*/
-  background-image: linear-gradient(to left, #FFFFFF, #ECECEC, #FFFFFF);
   display: none;
+}
+
+footer:hover {
+  background-image: linear-gradient(to left, #FFFFFF, #ECECEC, #FFFFFF);
 }
 
 #emptySection {
@@ -89,5 +91,5 @@ footer {
 }
 
 .searchBar {
-/*width: 50vw;;*/
+  /*width: 50vw;;*/
 }
